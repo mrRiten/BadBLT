@@ -14,7 +14,7 @@ class Bcolors:
 def logo():
     print(Bcolors.FAIL + '=' * 40)
     print(Bcolors.FAIL + '  ___   _   ___    ___ _  _____ \t\t developer: RitenMaer')
-    print(Bcolors.FAIL + ' | _ ) /_\ |   \  | _ ) ||_   _|\t\t author_of_idea: RomanFox')
+    print(Bcolors.FAIL + ' | _ ) /_\ |   \  | _ ) ||_   _|\t\t author_of_idea: RomanFox69')
     print(Bcolors.FAIL + ' | _ \/ _ \| |) | | _ \ |__| |  \t\t source: https://github.com/mrRiten/BadBLT.git')
     print(Bcolors.FAIL + ' |___/_/ \_\___/  |___/____|_|  \t\t for jokes and fune')
     print(Bcolors.FAIL + '=' * 40)
